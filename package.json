@@ -1,0 +1,22 @@
+{
+  "name": "node-pdf",
+  "version": "1.0.0",
+  "description": "Create PDF file from HTML",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Devesh Chaudhari",
+  "license": "ISC",
+  "dependencies": {
+    "i": "^0.3.6",
+    "npm": "^6.14.9",
+    "puppeteer": "^5.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/monatheoctocat/my_package.git"
+  },
+  "keywords": [],
+  "homepage": "https://github.com/monatheoctocat/my_package"
+}
