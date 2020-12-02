@@ -15,8 +15,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/monatheoctocat/my_package.git"
+    "url": "https://github.com/DeveshRx/Node-PDF"
   },
-  "keywords": [],
-  "homepage": "https://github.com/monatheoctocat/my_package"
+  "keywords": ["pdf","node","convert html to pdf", "html","library","puppeteer"],
+  "homepage": "https://github.com/DeveshRx/Node-PDF"
 }
