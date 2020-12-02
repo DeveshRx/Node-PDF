@@ -4,7 +4,6 @@
 [![Node version](https://img.shields.io/badge/Platform-NodeJS-green)](https://www.npmjs.com/package/@deveshrx/node-pdf)
 [![Node version](https://img.shields.io/badge/Developed%20by-Devesh%20Chaudhari-blueviolet)](https://github.com/DeveshRx)
 
-
 Node-PDF can convert html code into pdf file. Node-PDF is based on puppeteer to render html code and create pdf file.
 
 ### Install
@@ -13,14 +12,16 @@ npm install @deveshrx/node-pdf@1.0.0
 ```
 
 ### Usage
-```javascript
-nodepdf.CreatePDF(<HTML>, <FileName.pdf>, <FolderName>);
-```
+
+` nodepdf.CreatePDF(<HTML> , <FileName.pdf>, <FolderName>); `
 
 ### Example
 ```javascript
-
 var nodepdf = require("@deveshrx/node-pdf");
 
-await nodepdf.CreatePDF("<html><body>Hello !!</body></html>", "file.pdf", "my-folder");
+async function createPDF(){
+
+    await nodepdf.CreatePDF("<html><body>Hello PDF !!</body></html>", "file.pdf", "my-folder");
+
+}
 ```
