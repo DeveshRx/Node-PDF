@@ -6,7 +6,7 @@
 'use strict';
 
 const puppeteer = require('puppeteer')
-fs = require('fs');
+var fs = require('fs');
 
 /***
  *  html = insert HTML code
