@@ -1,8 +1,8 @@
 {
-  "name": "node-pdf",
+  "name": "@deveshrx/node-pdf",
   "version": "1.0.0",
   "description": "Create PDF file from HTML",
-  "main": "app.js",
+  "main": "node-pdf.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,8 +15,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/DeveshRx/Node-PDF"
+    "url": "git+https://github.com/DeveshRx/Node-PDF.git"
   },
-  "keywords": ["pdf","node","convert html to pdf", "html","library","puppeteer"],
-  "homepage": "https://github.com/DeveshRx/Node-PDF"
+  "keywords": [
+    "pdf",
+    "node",
+    "convert html to pdf",
+    "html",
+    "library",
+    "puppeteer"
+  ],
+  "homepage": "https://github.com/DeveshRx/Node-PDF",
+  "bugs": {
+    "url": "https://github.com/DeveshRx/Node-PDF/issues"
+  },
+  "devDependencies": {}
 }
