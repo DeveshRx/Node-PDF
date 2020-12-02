@@ -8,7 +8,7 @@ Node-PDF can convert html code into pdf file. Node-PDF is based on puppeteer to 
 
 ### Install
 ```javascript
-npm install @deveshrx/node-pdf@1.0.0
+npm i @deveshrx/node-pdf
 ```
 
 ### Usage
