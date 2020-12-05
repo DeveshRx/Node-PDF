@@ -17,7 +17,7 @@ npm i @deveshrx/node-pdf
 
 ### Usage
 
-` nodepdf.CreatePDF(<HTML> , <FileName.pdf>, <FolderName>); `<br>
+` nodepdf.CreatePDF(<HTML> , <FileName.pdf>, <FolderName>); `<br><br>
 `<HTML>` place your html code into string variable. static html page is recommended for best performance. <br>
 `<FolderName>` can be `null` if you wish to save pdf file in parent directory.
 
