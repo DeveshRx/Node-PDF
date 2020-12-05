@@ -44,3 +44,19 @@ exports.CreatePDF = async function (html, filename, folder) {
   });
 
 }
+
+
+exports.GeneratePDF = async function (html) {
+
+  const browser = await puppeteer.launch({ headless: true });
+  const page = await browser.newPage();
+  //await page.goto('views/email.html', { waitUntil: 'networkidle0' });
+  //var contentHtml = fs.readFileSync('views/email.html', 'utf8');
+  //await page.setContent(contentHtml, { waitUntil: 'networkidle0' });
+  await page.goto(`data:text/html,${html}`, { waitUntil: 'networkidle0' });
+  const pdf = await page.pdf({ format: 'A4' });
+  await browser.close();
+return pdf;
+ 
+
+}

@@ -16,12 +16,39 @@ npm i @deveshrx/node-pdf
 ```
 
 ### Usage
+Simple:<br>
+`nodepdf.GeneratePDF(<HTML>);` <br>
 
+Advance:<br>
 ` nodepdf.CreatePDF(<HTML> , <FileName.pdf>, <FolderName>); `<br><br>
 `<HTML>` place your html code into string variable. static html page is recommended for best performance. <br>
 `<FolderName>` can be `null` if you wish to save pdf file in parent directory.
 
-### Example
+
+### Example 1
+
+Create PDF File <br>
+
+```javascript
+async function generatePDF(){
+
+    var html="<html><body>Hello PDF Generated !!</body></html>";
+    var pdf;
+    pdf= await nodepdf.GeneratePDF(html); 
+    //PDF has been generated and now you can whatever you want with "pdf" variable
+
+    var pdf_file_name="document.pdf";
+    fs.writeFile(pdf_file_name, pdf, function (err) {
+        if (err) return console.log(err);
+        console.log('PDF Generated');
+      });
+
+}
+```
+
+### Example 2
+Creating PDF File & save it to specific directory <br>
+
 ```javascript
 var nodepdf = require("@deveshrx/node-pdf");
 
