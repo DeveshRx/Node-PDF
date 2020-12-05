@@ -17,7 +17,7 @@ npm i @deveshrx/node-pdf
 
 ### Usage
 Simple:<br>
-`nodepdf.GeneratePDF(<HTML>);` <br>
+`var pdf = await nodepdf.GeneratePDF(<HTML>);` <br>
 
 Advance:<br>
 ` nodepdf.CreatePDF(<HTML> , <FileName.pdf>, <FolderName>); `<br><br>
