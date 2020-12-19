@@ -14,9 +14,13 @@ var fs = require('fs');
  *  folder= name of folder in which you want to save pdf file
  */
 
-exports.CreatePDF = async function (html, filename, folder) {
-
-  const browser = await puppeteer.launch({ headless: true });
+exports.CreatePDF = async function (html, filename, folder,options) {
+//example: options ={ headless: true }
+var opt={ headless: true };
+if(options!=null){
+opt=options;
+}
+  const browser = await puppeteer.launch(opt);
   const page = await browser.newPage();
 
   if (!fs.existsSync(folder)) {
@@ -46,10 +50,14 @@ exports.CreatePDF = async function (html, filename, folder) {
 }
 
 
-exports.GeneratePDF = async function (html) {
+exports.GeneratePDF = async function (html,options) {
 
-  const browser = await puppeteer.launch({ headless: true });
-  const page = await browser.newPage();
+  var opt={ headless: true };
+  if(options!=null){
+  opt=options;
+  }
+    const browser = await puppeteer.launch(opt);
+     const page = await browser.newPage();
   //await page.goto('views/email.html', { waitUntil: 'networkidle0' });
   //var contentHtml = fs.readFileSync('views/email.html', 'utf8');
   //await page.setContent(contentHtml, { waitUntil: 'networkidle0' });

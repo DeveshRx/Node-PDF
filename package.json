@@ -1,6 +1,6 @@
 {
   "name": "@deveshrx/node-pdf",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Create PDF file from HTML",
   "main": "node-pdf.js",
   "scripts": {

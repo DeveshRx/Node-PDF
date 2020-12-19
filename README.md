@@ -17,12 +17,13 @@ npm i @deveshrx/node-pdf
 
 ### Usage
 Simple:<br>
-`var pdf = await nodepdf.GeneratePDF(<HTML>);` <br>
+`var pdf = await nodepdf.GeneratePDF(<HTML>,<Options>);` <br>
 
 Advance:<br>
-`await nodepdf.CreatePDF(<HTML> , <FileName.pdf>, <FolderName>); `<br><br>
+`await nodepdf.CreatePDF(<HTML> , <FileName.pdf>, <FolderName>,<Options>); `<br><br>
 `<HTML>` place your html code into string variable. static html page is recommended for best performance. <br>
 `<FolderName>` can be `null` if you wish to save pdf file in parent directory.
+`<Options>` optional puppeteer Launch Options but can be `null`
 
 
 ### Example 1
@@ -34,7 +35,10 @@ async function generatePDF(){
 
     var html="<html><body>Hello PDF Generated !!</body></html>";
     var pdf;
-    pdf= await nodepdf.GeneratePDF(html); 
+var options=null;
+    // Or var options={headless:false}; // puppeteer Launch Options for advance users
+
+    pdf= await nodepdf.GeneratePDF(html,options); 
     //PDF has been generated and now you can whatever you want with "pdf" variable
 
     var pdf_file_name="document.pdf";
@@ -57,8 +61,10 @@ async function createPDF(){
     var html="<html><body>Hello PDF !!</body></html>";
     var pdf_file_name="document.pdf";
     var folder="my_docs"; // or var folder=null;
+var options=null;
+    // Or var options={headless:false}; // puppeteer Launch Options for advance users
 
-    await nodepdf.CreatePDF(html, pdf_file_name, folder);
+    await nodepdf.CreatePDF(html, pdf_file_name, folder,options);
 
 }
 ```
